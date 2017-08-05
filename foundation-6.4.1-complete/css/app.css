@@ -1,0 +1,17 @@
+.wrap {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 10000px;
+}
+
+.hero {
+    background-color: gray;
+    padding-top: 80px;
+    padding-right: 70px;
+    padding-bottom: 50px;
+}
+
+.cell {
+    background-color: dodgerblue;
+    border: 2px solid blueviolet;
+}
