@@ -185,20 +185,136 @@ h2.whycom {
     box-shadow: 0 12px 32px rgba(0,0,0,.15);
 }
 
-section.services {
-    background-color: #1a1a1a;
+.figure-section, .figure-section h3, .figure-section p {
+    background-color: #1E2024;
+    color: white;
+    font-size: 1.8rem;
 }
 
-.services-center {
-    width: 90%;
-    max-width: 1230px;
-    margin: 0 auto;
-    height: auto;
+.figure-section {
+    height: 39.99vw;
+    line-height: 34vw;
+    overflow: hidden;
 }
 
-.grid-x {
-    padding-top:1em;
+.figure-section p {
+    font-size: 1.2rem;
 }
+
+.figure-section div {
+    display: inline-block;
+    line-height: 1;
+    vertical-align: middle;
+}
+
+.figure-section label {
+    color: #606060;
+    font-weight: 300;
+    display: block;
+    font-size: 1.1em;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 90;
+    cursor: pointer;
+}
+
+.middle figure {
+    display: none;
+    position: absolute;
+    margin: 0;
+    top: 0;
+    right: -7%;
+    z-index: 50;
+}
+
+.figure-section .left, .figure-section .middle {
+    display: inline-block;
+}
+
+.figure-section .middle {
+    width: 50%;
+    position: relative;
+    height: 74%;
+}
+
+.figure-section .left {
+    text-align: left;
+    width: 40%;
+    padding: 0 10%;
+}
+
+.figure-section .left h3 {
+    font-size: 1.6em;
+    font-weight: 300;
+    padding: 10%;
+    text-transform: uppercase;
+    line-height:1em;
+}
+
+.figure-section .left p {
+    padding: 10%;
+    padding-top: 0;
+    font-size: 1.8rem;
+    font-weight: 300;
+}
+
+figcaption{
+    text-align: center;
+    padding-bottom: 3%;
+    font-weight: 300;
+}
+
+[type="radio"], [type="checkbox"] {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+
+.figure-section li:last-child figure,
+.figure-section label:hover ~ figure {
+    display: inline-block;
+}
+
+.figure-section li:hover ~ li figure {
+    display: none;
+}
+
+.figure-section label:hover,
+.figure-section label::selection {
+    color: #f14848;
+}
+
+figure .vid {
+    position: absolute;
+    left: -280%;
+    top: -15.8%;
+    height: 40.1vw;
+    width: 1750px;
+}
+
+figure .vid .video {
+    position: absolute;
+    object-fit: fill;
+    z-index: -100;
+    opacity: 0;
+    transform: scale(4);
+    right: 28%;
+    transition: opacity 2s ease-in;
+}
+
+.figure-section li:last-child figure .vid .video,
+.figure-section label:hover ~ figure div .video {
+    opacity: 0.3;
+}
+
+
+
 
 .cell:nth-child(odd) {
     background-color: dodgerblue;
@@ -251,7 +367,7 @@ section.tv {
 .tv-left img {
     min-width:48%;
     height:auto;
-    margin-bottom: 1em;
+    margin-bottom: 2em;
 }
 
 .tv-left-text-content {
@@ -897,5 +1013,176 @@ footer {
 
 .bottom-logo a:hover {
     color: #ffffff;
+}
+
+
+ul#solutions {
+    display: flex;
+    visibility: hidden;
+    opacity: 0;
+    height: 0;
+    padding-top: .5em;
+    position: absolute;
+    width: 100vw;
+    text-align: center;
+    top: 1.3em;
+    right: -42px;
+    background-color: rgba(255,255,255,.98);
+    box-shadow: 0 4px 8px rgba(0,0,0,.1);
+    transition-property: all;
+    transition-duration: 500ms;
+    transition-timing-function: ease-in-out;
+    z-index: 9000;
+}
+
+ul#solutions li {
+    list-style: none;
+    flex-grow: 1;
+}
+
+ul#solutions li a {
+    transition: all 150ms linear;
+    text-transform: uppercase;
+    padding-top:1em;
+    padding-bottom:1em;
+    font-size: 1.8em;
+    font-weight: 100;
+    color: #3d3d3d;
+}
+
+ul#solutions li a:hover {
+    color:white;
+    background: #f14848;
+}
+
+ul.menu li:nth-child(2):hover ul#solutions {
+    visibility: visible;
+    opacity: 1;
+    height: 9.78vw;
+}
+
+/* For INDUSTRY */
+
+ul#industry {
+    display: flex;
+    visibility: hidden;
+    opacity: 0;
+    padding-top: .5em;
+    position: absolute;
+    width: 100vw;
+    text-align: center;
+    top: 1.3em;
+    right: -42px;
+    background-color: rgba(255,255,255,.98);
+    box-shadow: 0 4px 8px rgba(0,0,0,.1);
+    transition-property: all;
+    transition-duration: 500ms;
+    transition-timing-function: ease-in-out;
+    z-index: 9000;
+    height: 0;
+}
+
+ul#industry li {
+    list-style: none;
+    flex-grow: 1;
+}
+
+ul#industry li a {
+    transition: all 150ms linear;
+    text-transform: uppercase;
+    padding-top:1em;
+    padding-bottom:1em;
+    font-size: 1.8em;
+    font-weight: 100;
+    color: #3d3d3d;
+}
+
+ul#industry li a:hover {
+    color:white;
+    background: #f14848;
+}
+
+ul.menu li:nth-child(4):hover ul#industry {
+    visibility: visible;
+    opacity: 1;
+    height: 9.78vw;
+}
+
+/* FOR CLOUD */
+
+ul#cloud {
+    display: flex;
+    visibility: hidden;
+    opacity: 0;
+    /*padding-top: .5em;*/
+    position: absolute;
+    width: 100vw;
+    text-align: center;
+    top: 5.8em;
+    right: 0;
+    background-color: rgba(255,255,255,.98);
+    box-shadow: 0 4px 8px rgba(0,0,0,.1);
+    transition-property: all;
+    transition-duration: 500ms;
+    transition-timing-function: ease-in-out;
+    z-index: 9000;
+    height: 0;
+}
+
+ul#cloud li {
+    list-style: none;
+    flex-grow: 1;
+}
+
+ul#cloud li a {
+    transition: all 150ms linear;
+    text-transform: uppercase;
+    padding-top:1em;
+    padding-bottom:1em;
+    font-size: 1.8em;
+    font-weight: 100;
+    color: #3d3d3d;
+}
+
+ul#cloud li a:hover {
+    color:white;
+    background: #f14848;
+}
+
+ul#solutions li:nth-child(1):hover ul#cloud {
+    visibility: visible;
+    opacity: 1;
+    height: 9vw;
+}
+
+/* FOR MIDDLEWARE */
+
+ul#middleware {
+    display: flex;
+    visibility: hidden;
+    opacity: 0;
+    /*padding-top: .5em;*/
+    position: absolute;
+    width: 100vw;
+    text-align: center;
+    top: 5.8em;
+    right: 0;
+    background-color: rgba(255,255,255,.98);
+    box-shadow: 0 4px 8px rgba(0,0,0,.1);
+    transition-property: all;
+    transition-duration: 500ms;
+    transition-timing-function: ease-in-out;
+    z-index: 9000;
+    height: 0;
+}
+
+ul#solutions li:nth-child(2):hover ul#middleware {
+    visibility: visible;
+    opacity: 1;
+    height: 9vw;
+}
+
+.middle ul li {
+    list-style: none;
 }
 
